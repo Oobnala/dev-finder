@@ -1,0 +1,52 @@
+@import '../sass/theme.scss';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 2.6rem;
+
+    @include theme() {
+      color: get-theme('text');
+    }
+  }
+
+  &__toggle {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 7.8rem;
+    height: 2rem;
+
+    @include theme() {
+      color: get-theme('toggle-text');
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      letter-spacing: 0.25rem;
+    }
+
+    &__icon path {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    &__icon:hover path {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__toggle:hover &__toggle__icon path,
+  &__toggle:hover {
+    cursor: pointer;
+    @include theme() {
+      color: get-theme('text');
+      fill: get-theme('text');
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import './sass/theme.scss';
+
+.container {
+  height: 100%;
+  width: 45vw;
+
+  @include theme() {
+    background-color: get-theme('bg');
+  }
+}

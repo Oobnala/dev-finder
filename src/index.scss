@@ -1,0 +1,49 @@
+@import './sass/theme.scss';
+@import 'https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* Force Inheritance */
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light-gray-lm;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+  font-family: 'Space Mono', sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  line-height: 2.6rem;
+}
+
+h2 {
+  font-weight: bold;
+  line-height: 2.2rem;
+}
+
+h3 {
+  font-weight: normal;
+  line-height: 1.6rem;
+}
+
+h4 {
+  font-weight: normal;
+  line-height: 2.2rem;
+}

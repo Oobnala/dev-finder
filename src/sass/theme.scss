@@ -1,0 +1,58 @@
+// Light and Dark mode
+$color-light-blue: #0079ff;
+$color-light-blue-active: #60abff;
+
+// Light Mode (lm)
+$color-blue-gray-lm: #697c9a;
+$color-dark-blue-lm: #4b6a9b;
+$color-dark-blue-undefined-lm: #4b6a9b50;
+$color-black-lm: #2b3442;
+$color-light-gray-lm: #f6f8ff;
+$color-white-lm: #fefefe;
+
+// Dark Mode (dm)
+$color-white-dm: #ffffff;
+$color-white-undefined-dm: #ffffff50;
+$color-dark-black-blue-dm: #141d2f;
+$color-black-blue-dm: #1e2a47;
+
+$themes: (
+  light: (
+    bg: $color-light-gray-lm,
+    card-bg: $color-white-lm,
+    search-btn: $color-light-blue,
+    search-btn-text: $color-white-lm,
+    text: $color-black-lm,
+    text-secondary: $color-dark-blue-lm,
+    text-undefined: $color-dark-blue-undefined-lm,
+    date-text: $color-blue-gray-lm,
+    toggle-text: $color-blue-gray-lm,
+    stats-bg: $color-light-gray-lm,
+  ),
+  dark: (
+    bg: $color-dark-black-blue-dm,
+    card-bg: $color-black-blue-dm,
+    search-btn: $color-light-blue,
+    search-btn-text: $color-white-dm,
+    text: $color-white-dm,
+    text-secondary: $color-white-dm,
+    text-undefined: $color-white-undefined-dm,
+    date-text: $color-white-dm,
+    toggle-text: $color-white-dm,
+    stats-bg: $color-dark-black-blue-dm,
+  ),
+);
+
+@mixin theme() {
+  @each $theme, $map in $themes {
+    $theme-map: $map !global;
+    .theme--#{$theme} & {
+      @content;
+    }
+    $theme-map: null !global;
+  }
+}
+
+@function get-theme($key) {
+  @return map-get($theme-map, $key);
+}
