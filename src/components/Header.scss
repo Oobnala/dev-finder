@@ -42,11 +42,15 @@
   }
 
   &__toggle:hover &__toggle__icon path,
+  &__toggle:hover h2,
   &__toggle:hover {
     cursor: pointer;
+
+    transition: all 0.4s ease;
+
     @include theme() {
-      color: get-theme('text');
-      fill: get-theme('text');
+      color: get-theme('toggle-icon-hover');
+      fill: get-theme('toggle-icon-hover');
     }
   }
 }

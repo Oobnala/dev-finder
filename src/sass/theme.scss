@@ -15,6 +15,7 @@ $color-white-dm: #ffffff;
 $color-white-undefined-dm: #ffffff50;
 $color-dark-black-blue-dm: #141d2f;
 $color-black-blue-dm: #1e2a47;
+$color-blue-hover-dm: #90a4df;
 
 $themes: (
   light: (
@@ -27,6 +28,7 @@ $themes: (
     text-undefined: $color-dark-blue-undefined-lm,
     date-text: $color-blue-gray-lm,
     toggle-text: $color-blue-gray-lm,
+    toggle-icon-hover: $color-black-lm,
     stats-bg: $color-light-gray-lm,
   ),
   dark: (
@@ -39,6 +41,7 @@ $themes: (
     text-undefined: $color-white-undefined-dm,
     date-text: $color-white-dm,
     toggle-text: $color-white-dm,
+    toggle-icon-hover: $color-blue-hover-dm,
     stats-bg: $color-dark-black-blue-dm,
   ),
 );
