@@ -37,7 +37,7 @@ const App = () => {
             followers: data.followers,
             following: data.following,
             location: data.location,
-            url: data.url,
+            url: data.blog,
             twitter: data.twitter_username,
             company: data.company,
           };
@@ -45,7 +45,6 @@ const App = () => {
           setUser(user);
         });
     } catch (err) {
-      setIsLoading(false);
       setError(true);
     }
   }, []);

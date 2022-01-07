@@ -7,4 +7,15 @@
   @include theme() {
     background-color: get-theme('bg');
   }
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 55vw;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 80vw;
+  }
+  @media only screen and (max-width: $bp-small) {
+    width: 90vw;
+  }
 }

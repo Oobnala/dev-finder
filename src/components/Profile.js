@@ -55,77 +55,77 @@ const Header = (props) => {
       <div className="profile__img-container">
         <img className="profile__img" src={user.avatar} alt="" />
       </div>
-      <div className="profile__details">
-        <div className="profile__username-container">
-          <div>
-            <h1 className="profile__name">{user.name}</h1>
-            <h3 className="profile__name-link">@{user.login}</h3>
-          </div>
-          {convertDate(user.date)}
+      <div className="profile__username-container">
+        <div>
+          <h1 className="profile__name">{user.name}</h1>
+          <h3 className="profile__name-link">@{user.login}</h3>
         </div>
-        <h4 className="profile__description">
-          {user.bio ? user.bio : 'This profile has no bio'}
-        </h4>
-        <div className="profile__stats">
-          <div className="profile__stat">
-            <h4>Repos</h4>
-            <h2>{user.repos}</h2>
-          </div>
-          <div className="profile__stat">
-            <h4>Followers</h4>
-            <h2>{user.followers}</h2>
-          </div>
-          <div className="profile__stat">
-            <h4>Following</h4>
-            <h2>{user.following}</h2>
-          </div>
+        {convertDate(user.date)}
+      </div>
+      <h4 className="profile__description">
+        {user.bio ? user.bio : 'This profile has no bio'}
+      </h4>
+      <div className="profile__stats">
+        <div className="profile__stat">
+          <h4>Repos</h4>
+          <h2>{user.repos}</h2>
         </div>
-        <div className="profile__links">
-          {user.location ? (
-            <div className="profile__link">
-              <Location className="profile__link-icon" />
-              <h4 className="profile__link-text">{user.location}</h4>
-            </div>
-          ) : (
-            <div className="profile__link">
-              <Location className="profile__link-icon--undefined" />
-              <h4 className="profile__link-text--undefined">Not Available</h4>
-            </div>
-          )}
-          {user.twitter ? (
-            <div className="profile__link">
-              <Twitter className="profile__link-icon" />
-              <h4 className="profile__link-text">{user.twitter}</h4>
-            </div>
-          ) : (
-            <div className="profile__link">
-              <Twitter className="profile__link-icon--undefined" />
-              <h4 className="profile__link-text--undefined">Not Available</h4>
-            </div>
-          )}
-          {user.url ? (
-            <div className="profile__link">
-              <Website className="profile__link-icon" />
-              <h4 className="profile__link-text">{user.url}</h4>
-            </div>
-          ) : (
-            <div className="profile__link">
-              <Website className="profile__link-icon--undefined" />
-              <h4 className="profile__link-text--undefined">Not Available</h4>
-            </div>
-          )}
-          {user.company ? (
-            <div className="profile__link">
-              <Company className="profile__link-icon" />
-              <h4 className="profile__link-text">{user.company}</h4>
-            </div>
-          ) : (
-            <div className="profile__link">
-              <Company className="profile__link-icon--undefined" />
-              <h4 className="profile__link-text--undefined">Not Available</h4>
-            </div>
-          )}
+        <div className="profile__stat">
+          <h4>Followers</h4>
+          <h2>{user.followers}</h2>
         </div>
+        <div className="profile__stat">
+          <h4>Following</h4>
+          <h2>{user.following}</h2>
+        </div>
+      </div>
+      <div className="profile__links">
+        {user.location ? (
+          <div className="profile__link">
+            <Location className="profile__link-icon" />
+            <h4 className="profile__link-text">{user.location}</h4>
+          </div>
+        ) : (
+          <div className="profile__link">
+            <Location className="profile__link-icon--undefined" />
+            <h4 className="profile__link-text--undefined">Not Available</h4>
+          </div>
+        )}
+        {user.twitter ? (
+          <div className="profile__link">
+            <Twitter className="profile__link-icon" />
+            <h4 className="profile__link-text">{user.twitter}</h4>
+          </div>
+        ) : (
+          <div className="profile__link">
+            <Twitter className="profile__link-icon--undefined" />
+            <h4 className="profile__link-text--undefined">Not Available</h4>
+          </div>
+        )}
+        {user.url ? (
+          <div className="profile__link">
+            <Website className="profile__link-icon" />
+            <a href={user.url} className="profile__link-text">
+              {user.url}
+            </a>
+          </div>
+        ) : (
+          <div className="profile__link">
+            <Website className="profile__link-icon--undefined" />
+            <h4 className="profile__link-text--undefined">Not Available</h4>
+          </div>
+        )}
+        {user.company ? (
+          <div className="profile__link">
+            <Company className="profile__link-icon" />
+            <h4 className="profile__link-text">{user.company}</h4>
+          </div>
+        ) : (
+          <div className="profile__link">
+            <Company className="profile__link-icon--undefined" />
+            <h4 className="profile__link-text--undefined">Not Available</h4>
+          </div>
+        )}
       </div>
     </div>
   );

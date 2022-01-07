@@ -28,6 +28,7 @@
     h2 {
       font-size: 1.3rem;
       letter-spacing: 0.25rem;
+      transition: none;
     }
 
     &__icon path {
@@ -46,7 +47,7 @@
   &__toggle:hover {
     cursor: pointer;
 
-    transition: all 0.4s ease;
+    transition: none;
 
     @include theme() {
       color: get-theme('toggle-icon-hover');
