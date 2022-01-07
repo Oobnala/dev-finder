@@ -25,7 +25,6 @@ const App = () => {
         .then((response) => {
           setIsLoading(false);
           const { data } = response;
-          console.log(data);
 
           let user = {
             avatar: data.avatar_url,

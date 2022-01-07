@@ -27,6 +27,8 @@
     border: none;
     background-color: transparent;
     caret-color: $color-light-blue;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @include theme() {
       color: get-theme('text');

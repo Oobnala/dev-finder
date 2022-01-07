@@ -57,7 +57,9 @@ const Header = (props) => {
       </div>
       <div className="profile__username-container">
         <div>
-          <h1 className="profile__name">{user.name}</h1>
+          <h1 className="profile__name">
+            {user.name ? user.name : user.login}
+          </h1>
           <h3 className="profile__name-link">@{user.login}</h3>
         </div>
         {convertDate(user.date)}
@@ -80,52 +82,72 @@ const Header = (props) => {
         </div>
       </div>
       <div className="profile__links">
-        {user.location ? (
-          <div className="profile__link">
-            <Location className="profile__link-icon" />
+        <div className="profile__link">
+          <Location
+            className={
+              user.location
+                ? 'profile__link-icon'
+                : 'profile__link-icon--undefined'
+            }
+          />
+          {user.location ? (
             <h4 className="profile__link-text">{user.location}</h4>
-          </div>
-        ) : (
-          <div className="profile__link">
-            <Location className="profile__link-icon--undefined" />
+          ) : (
             <h4 className="profile__link-text--undefined">Not Available</h4>
-          </div>
-        )}
-        {user.twitter ? (
-          <div className="profile__link">
-            <Twitter className="profile__link-icon" />
-            <h4 className="profile__link-text">{user.twitter}</h4>
-          </div>
-        ) : (
-          <div className="profile__link">
-            <Twitter className="profile__link-icon--undefined" />
+          )}
+        </div>
+        <div className="profile__link">
+          <Twitter
+            className={
+              user.twitter
+                ? 'profile__link-icon'
+                : 'profile__link-icon--undefined'
+            }
+          />
+          {user.twitter ? (
+            <a
+              href={`https://twitter.com/${user.twitter.replace('@', '')}`}
+              className="profile__link-text"
+            >
+              {user.twitter}
+            </a>
+          ) : (
             <h4 className="profile__link-text--undefined">Not Available</h4>
-          </div>
-        )}
-        {user.url ? (
-          <div className="profile__link">
-            <Website className="profile__link-icon" />
-            <a href={user.url} className="profile__link-text">
+          )}
+        </div>
+        <div className="profile__link">
+          <Website
+            className={
+              user.url ? 'profile__link-icon' : 'profile__link-icon--undefined'
+            }
+          />
+          {user.url ? (
+            <a href={`${user.url}`} className="profile__link-text">
               {user.url}
             </a>
-          </div>
-        ) : (
-          <div className="profile__link">
-            <Website className="profile__link-icon--undefined" />
+          ) : (
             <h4 className="profile__link-text--undefined">Not Available</h4>
-          </div>
-        )}
-        {user.company ? (
-          <div className="profile__link">
-            <Company className="profile__link-icon" />
-            <h4 className="profile__link-text">{user.company}</h4>
-          </div>
-        ) : (
-          <div className="profile__link">
-            <Company className="profile__link-icon--undefined" />
+          )}
+        </div>
+        <div className="profile__link">
+          <Company
+            className={
+              user.company
+                ? 'profile__link-icon'
+                : 'profile__link-icon--undefined'
+            }
+          />
+          {user.company ? (
+            <a
+              href={`https://github.com/${user.company.replace('@', '')}`}
+              className="profile__link-text"
+            >
+              {user.company}
+            </a>
+          ) : (
             <h4 className="profile__link-text--undefined">Not Available</h4>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
