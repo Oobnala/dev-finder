@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import { ReactComponent as SearchIcon } from '../assets/icon-search.svg';
+import SearchIcon from '../assets/icon-search.svg';
 import './Search.scss';
 
 const Search = (props) => {
@@ -13,7 +13,7 @@ const Search = (props) => {
 
   return (
     <div className="search">
-      <SearchIcon className="search__icon" />
+      <img src={SearchIcon} alt="Search" className="search__icon" />
       <input
         ref={usernameInputRef}
         className="search__input"

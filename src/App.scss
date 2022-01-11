@@ -3,6 +3,7 @@
 .container {
   height: 100%;
   width: 45vw;
+  min-width: 35rem;
 
   @include theme() {
     background-color: get-theme('bg');

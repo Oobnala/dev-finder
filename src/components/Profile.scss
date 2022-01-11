@@ -6,7 +6,7 @@
   grid-template-rows: repeat(auto-fit, 1fr);
   column-gap: 3rem;
   margin-top: 2rem;
-  padding: 4rem 4rem;
+  padding: 3rem 4rem;
   border-radius: 1rem;
   box-shadow: 0px 3px 8px rgb(0, 0, 0, 0.2);
 
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   &__name {
@@ -79,10 +79,10 @@
     grid-column: 2 / -1;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     border-radius: 1rem;
     padding-left: 3rem;
-    padding-right: 8rem;
+    padding-right: 9rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
@@ -120,7 +120,7 @@
     flex-direction: row;
     align-items: center;
     margin-right: 5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   &__link-icon {
@@ -143,8 +143,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
-    height: 100%;
     text-decoration: none;
+    line-height: 2.5rem;
 
     @include theme() {
       color: get-theme('text-secondary');
@@ -154,6 +154,7 @@
       font-size: 1.5rem;
       text-overflow: ellipsis;
       width: 100%;
+      line-height: 2.5rem;
       @include theme() {
         color: get-theme('text-undefined');
       }
@@ -191,7 +192,8 @@
   .profile {
     grid-template-columns: 1 3fr;
     grid-template-rows: repeat(4, 1fr);
-    padding: 3rem 2.5rem;
+    padding: 2rem 3rem;
+
     &__img-container {
       grid-column: 0 / 1;
       grid-row: 1 / 2;
@@ -219,6 +221,15 @@
     &__links {
       grid-row: 4 / -1;
       grid-column: span 2;
+      grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-large) {
+  .profile {
+    &__links {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
   }
 }
@@ -241,7 +252,7 @@
     &__stats {
       justify-content: space-around;
       align-items: center;
-      padding: 0;
+      padding: 2rem;
 
       @include theme() {
         background-color: get-theme('stats-bg');
@@ -274,5 +285,9 @@
   .profile {
     column-gap: 1rem;
     row-gap: 1rem;
+
+    &__username-container {
+      margin-bottom: 2rem;
+    }
   }
 }

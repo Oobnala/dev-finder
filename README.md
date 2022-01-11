@@ -30,21 +30,29 @@ Users should be able to:
 
 ### Screenshot
 
-## Desktop Dark Theme
-
-![](./demo_images/desktop-dark-theme.png)
-
 ## Desktop Light Theme
 
 ![](./demo_images/desktop-light-theme.png)
 
-## Mobile Dark Theme
+## Desktop Dark Theme
 
-![](./demo_images/mobile-dark-theme.png)
+![](./demo_images/desktop-dark-theme.png)
+
+## Tablet Light Theme
+
+![](./demo_images/tablet-light-theme.png)
+
+## Tablet Dark Theme
+
+![](./demo_images/tablet-dark-theme.png)
 
 ## Mobile Light Theme
 
 ![](./demo_images/mobile-light-theme.png)
+
+## Mobile Dark Theme
+
+![](./demo_images/mobile-dark-theme.png)
 
 ### Links
 
@@ -76,4 +84,3 @@ Areas that I want to continue improving is writing cleaner code and Sass/CSS con
 ## Author
 
 - Frontend Mentor - [@Oobnala](https://www.frontendmentor.io/profile/Oobnala)
-  ∂
